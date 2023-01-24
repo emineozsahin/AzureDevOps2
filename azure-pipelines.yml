@@ -1,0 +1,18 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+  
+steps:
+- script: node -v
+  displayName: 'node version'
+  
+- script: npm -v
+  displayName: 'npm version'
+
+- script: npm install
+  displayName: 'npm install'
+
+- script: npm run build
+  displayName: 'npm build'
